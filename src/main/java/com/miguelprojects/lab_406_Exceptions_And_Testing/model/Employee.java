@@ -30,7 +30,7 @@ public class Employee {
     private Status status;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Patient> patientList;
 
     public Employee() {    }
